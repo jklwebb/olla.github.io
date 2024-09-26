@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Smooth Scrolling -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Header Section -->
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-a"></i>
+            <div class="logo-text">Karthikeyan J.</div>
+        </div>
+        <nav>
+            <div class="togglebtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navlinks">
+                <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#about"><i class="fa-solid fa-user"></i> About Me</a></li>
+                <li><a href="#projects"><i class="fa-solid fa-briefcase"></i> Portfolio</a></li>
+                <li><a href="My_own.pdf" target="_blank"><i class="fa-solid fa-file"></i> Resume</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+            <div class="container">
+                <div class="hero-pic animate__animated animate__fadeInRight">
+                    <img src="Images/jkl1.jpg" alt="profile pic">
+                </div>
+                <div class="hero-text animate__animated animate__fadeInLeft">
+                    <h5>Hi I'm <span class="input">UI/UX Designer</span></h5>
+                    <h1>Karthikeyan J.</h1>
+                    <p>I am a passionate UI/UX designer, graphic designer, and web developer focused on creating intuitive and visually appealing digital experiences.</p>
+                    <div class="btn-group">
+                        <a href="My_own.pdf" class="btn active animate__animated animate__pulse animate__infinite" target="_blank">Download Resume</a>
+                        <a href="mailto:your_email@example.com" class="btn">Contact</a>
+                    </div>
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="about-container animate__animated animate__fadeInUp">
+            <h2>About Me</h2>
+            <p>I’m Karthikeyan J., a UI/UX designer, web developer, and graphic designer with a passion for crafting sleek and functional designs. I love solving design challenges and bringing new ideas to life.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project-card animate__animated animate__zoomIn">
+                <img src="images/project1.jpg" alt="Project 1">
+                <h3>Project One</h3>
+                <p>Responsive e-commerce website.</p>
+            </div>
+            <div class="project-card animate__animated animate__zoomIn animate__delay-1s">
+                <img src="images/project2.jpg" alt="Project 2">
+                <h3>Project Two</h3>
+                <p>Fitness tracking mobile app.</p>
+            </div>
+            <div class="project-card animate__animated animate__zoomIn animate__delay-2s">
+                <img src="images/project3.jpg" alt="Project 3">
+                <h3>Project Three</h3>
+                <p>Portfolio website design.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <div class="contact-form animate__animated animate__fadeInUp">
+                <form action="#" method="post">
+                    <div class="input-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const toggleBtn = document.querySelector('.togglebtn');
+        const navLinks = document.querySelector('.navlinks');
+
+        toggleBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.navlinks a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        var typed = new Typed(".input", {
+            strings: ["UI/UX Designer", "Web Developer", "Graphic Designer"],
+            typeSpeed: 70,
+            backSpeed: 60,
+            loop: true
+        });
+    </script>
+
+</body>
+</html>
+<script>
+    const toggleBtn = document.querySelector('.togglebtn');
+    const navLinks = document.querySelector('.navlinks');
+
+    toggleBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Close the mobile menu when a link is clicked
+    document.querySelectorAll('.navlinks a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+</script>
